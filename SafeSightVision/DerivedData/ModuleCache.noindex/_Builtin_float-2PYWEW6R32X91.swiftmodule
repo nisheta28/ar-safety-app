@@ -1,0 +1,16 @@
+---
+path:            '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/xrsimulator/prebuilt-modules/2.2/_Builtin_float.swiftmodule/arm64-apple-xros-simulator.swiftmodule'
+dependencies:
+  - mtime:           1733472345000000000
+    path:            '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/xrsimulator/prebuilt-modules/2.2/_Builtin_float.swiftmodule/arm64-apple-xros-simulator.swiftmodule'
+    size:            22088
+  - mtime:           1731225342000000000
+    path:            'usr/lib/swift/Swift.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            2050166
+    sdk_relative:    true
+  - mtime:           1731225400000000000
+    path:            'usr/lib/swift/_Builtin_float.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            4198
+    sdk_relative:    true
+version:         1
+...

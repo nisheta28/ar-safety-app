@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>11</integer>
+	<key>logs</key>
+	<dict>
+		<key>66DD20AF-7F9E-4571-AC8C-798C8E84660C</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>66DD20AF-7F9E-4571-AC8C-798C8E84660C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>1</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SafeSightVision project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SafeSightVision</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project SafeSightVision with scheme SafeSightVision</string>
+			<key>timeStartedRecording</key>
+			<real>797037986.54814303</real>
+			<key>timeStoppedRecording</key>
+			<real>797038004.33221996</real>
+			<key>title</key>
+			<string>Building project SafeSightVision with scheme SafeSightVision</string>
+			<key>uniqueIdentifier</key>
+			<string>66DD20AF-7F9E-4571-AC8C-798C8E84660C</string>
+		</dict>
+		<key>8161F179-8A1B-40A4-A4DF-6E64EE7E0F96</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8161F179-8A1B-40A4-A4DF-6E64EE7E0F96.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SafeSightVision project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SafeSightVision</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project SafeSightVision with scheme SafeSightVision</string>
+			<key>timeStartedRecording</key>
+			<real>797038070.07475603</real>
+			<key>timeStoppedRecording</key>
+			<real>797038071.81885505</real>
+			<key>title</key>
+			<string>Building project SafeSightVision with scheme SafeSightVision</string>
+			<key>uniqueIdentifier</key>
+			<string>8161F179-8A1B-40A4-A4DF-6E64EE7E0F96</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,56 @@
+{
+  "source": "/Users/nisheta/Development/AR Project/SafeSightVision/SafeSightVision/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "SafeSight",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 11
+        }
+      },
+      {
+        "comment": "",
+        "key": "Watch mode shows a discreet overlay in your space — exit direction and status only you see (demo).",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 14
+        }
+      },
+      {
+        "comment": "",
+        "key": "Exit watch mode",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 21
+        }
+      },
+      {
+        "comment": "",
+        "key": "Exit watch mode",
+        "location": {
+          "startingColumn": 37,
+          "startingLine": 29
+        }
+      },
+      {
+        "comment": "",
+        "key": "Start watch mode",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 31
+        }
+      },
+      {
+        "comment": "",
+        "key": "Start watch mode",
+        "location": {
+          "startingColumn": 37,
+          "startingLine": 60
+        }
+      }
+    ]
+  },
+  "version": 1
+}
