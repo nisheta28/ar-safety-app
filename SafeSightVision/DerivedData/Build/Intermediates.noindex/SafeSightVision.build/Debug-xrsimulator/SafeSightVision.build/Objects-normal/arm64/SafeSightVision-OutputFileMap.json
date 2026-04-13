@@ -1,0 +1,58 @@
+{
+  "" : {
+    "diagnostics" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/SafeSightVision-master.dia",
+    "emit-module-dependencies" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/SafeSightVision-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/SafeSightVision-master-emit-module.dia",
+    "swift-dependencies" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/SafeSightVision-master.swiftdeps"
+  },
+  "/Users/nisheta/Development/AR Project/SafeSightVision/SafeSightVision/ContentView.swift" : {
+    "const-values" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/nisheta/Development/AR Project/SafeSightVision/SafeSightVision/DebugSessionLog.swift" : {
+    "const-values" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/DebugSessionLog.swiftconstvalues",
+    "dependencies" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/DebugSessionLog.d",
+    "diagnostics" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/DebugSessionLog.dia",
+    "index-unit-output-path" : "/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/DebugSessionLog.o",
+    "llvm-bc" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/DebugSessionLog.bc",
+    "object" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/DebugSessionLog.o",
+    "swift-dependencies" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/DebugSessionLog.swiftdeps",
+    "swiftmodule" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/DebugSessionLog~partial.swiftmodule"
+  },
+  "/Users/nisheta/Development/AR Project/SafeSightVision/SafeSightVision/SafeSightVisionApp.swift" : {
+    "const-values" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/SafeSightVisionApp.swiftconstvalues",
+    "dependencies" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/SafeSightVisionApp.d",
+    "diagnostics" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/SafeSightVisionApp.dia",
+    "index-unit-output-path" : "/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/SafeSightVisionApp.o",
+    "llvm-bc" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/SafeSightVisionApp.bc",
+    "object" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/SafeSightVisionApp.o",
+    "swift-dependencies" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/SafeSightVisionApp.swiftdeps",
+    "swiftmodule" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/SafeSightVisionApp~partial.swiftmodule"
+  },
+  "/Users/nisheta/Development/AR Project/SafeSightVision/SafeSightVision/WatchImmersiveView.swift" : {
+    "const-values" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchImmersiveView.swiftconstvalues",
+    "dependencies" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchImmersiveView.d",
+    "diagnostics" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchImmersiveView.dia",
+    "index-unit-output-path" : "/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchImmersiveView.o",
+    "llvm-bc" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchImmersiveView.bc",
+    "object" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchImmersiveView.o",
+    "swift-dependencies" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchImmersiveView.swiftdeps",
+    "swiftmodule" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchImmersiveView~partial.swiftmodule"
+  },
+  "/Users/nisheta/Development/AR Project/SafeSightVision/SafeSightVision/WatchModels.swift" : {
+    "const-values" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchModels.swiftconstvalues",
+    "dependencies" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchModels.d",
+    "diagnostics" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchModels.dia",
+    "index-unit-output-path" : "/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchModels.o",
+    "llvm-bc" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchModels.bc",
+    "object" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchModels.o",
+    "swift-dependencies" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchModels.swiftdeps",
+    "swiftmodule" : "/Users/nisheta/Development/AR Project/SafeSightVision/DerivedData/Build/Intermediates.noindex/SafeSightVision.build/Debug-xrsimulator/SafeSightVision.build/Objects-normal/arm64/WatchModels~partial.swiftmodule"
+  }
+}

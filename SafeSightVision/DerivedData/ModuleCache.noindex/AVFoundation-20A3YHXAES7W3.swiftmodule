@@ -1,0 +1,184 @@
+---
+path:            '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/xrsimulator/prebuilt-modules/2.2/AVFoundation.swiftmodule/arm64-apple-xros-simulator.swiftmodule'
+dependencies:
+  - mtime:           1733472397000000000
+    path:            '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/xrsimulator/prebuilt-modules/2.2/AVFoundation.swiftmodule/arm64-apple-xros-simulator.swiftmodule'
+    size:            307308
+  - mtime:           1731225342000000000
+    path:            'usr/lib/swift/Swift.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            2050166
+    sdk_relative:    true
+  - mtime:           1731226093000000000
+    path:            'usr/include/_time.apinotes'
+    size:            1132
+    sdk_relative:    true
+  - mtime:           1731227095000000000
+    path:            'usr/include/ObjectiveC.apinotes'
+    size:            11147
+    sdk_relative:    true
+  - mtime:           1731222596000000000
+    path:            'usr/include/Dispatch.apinotes'
+    size:            19
+    sdk_relative:    true
+  - mtime:           1731224925000000000
+    path:            'System/Library/Frameworks/Security.framework/Headers/Security.apinotes'
+    size:            162
+    sdk_relative:    true
+  - mtime:           1731228215000000000
+    path:            'System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes'
+    size:            81098
+    sdk_relative:    true
+  - mtime:           1731230025000000000
+    path:            'System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes'
+    size:            1519
+    sdk_relative:    true
+  - mtime:           1731227987000000000
+    path:            'System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes'
+    size:            52901
+    sdk_relative:    true
+  - mtime:           1731228950000000000
+    path:            'System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes'
+    size:            1192
+    sdk_relative:    true
+  - mtime:           1730064096000000000
+    path:            'System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes'
+    size:            77758
+    sdk_relative:    true
+  - mtime:           1731645472000000000
+    path:            'System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes'
+    size:            65704
+    sdk_relative:    true
+  - mtime:           1731229449000000000
+    path:            'System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes'
+    size:            1666
+    sdk_relative:    true
+  - mtime:           1731230014000000000
+    path:            'System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes'
+    size:            114
+    sdk_relative:    true
+  - mtime:           1731229747000000000
+    path:            'System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes'
+    size:            215
+    sdk_relative:    true
+  - mtime:           1731228760000000000
+    path:            'System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes'
+    size:            7428
+    sdk_relative:    true
+  - mtime:           1731235954000000000
+    path:            'System/Library/Frameworks/AVFAudio.framework/Headers/AVFAudio.apinotes'
+    size:            8309
+    sdk_relative:    true
+  - mtime:           1731646876000000000
+    path:            'System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes'
+    size:            98450
+    sdk_relative:    true
+  - mtime:           1731226289000000000
+    path:            'usr/lib/swift/_errno.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            3712
+    sdk_relative:    true
+  - mtime:           1731226306000000000
+    path:            'usr/lib/swift/_signal.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            997
+    sdk_relative:    true
+  - mtime:           1731226313000000000
+    path:            'usr/lib/swift/sys_time.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            998
+    sdk_relative:    true
+  - mtime:           1731226306000000000
+    path:            'usr/lib/swift/_time.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            961
+    sdk_relative:    true
+  - mtime:           1731226306000000000
+    path:            'usr/lib/swift/_stdio.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            1423
+    sdk_relative:    true
+  - mtime:           1731226318000000000
+    path:            'usr/lib/swift/unistd.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            693
+    sdk_relative:    true
+  - mtime:           1731226289000000000
+    path:            'usr/lib/swift/_math.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            16104
+    sdk_relative:    true
+  - mtime:           1731225400000000000
+    path:            'usr/lib/swift/_Builtin_float.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            4198
+    sdk_relative:    true
+  - mtime:           1731226329000000000
+    path:            'usr/lib/swift/Darwin.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            19775
+    sdk_relative:    true
+  - mtime:           1731226624000000000
+    path:            'usr/lib/swift/_Concurrency.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            246663
+    sdk_relative:    true
+  - mtime:           1731226945000000000
+    path:            'usr/lib/swift/_StringProcessing.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            22664
+    sdk_relative:    true
+  - mtime:           1731227583000000000
+    path:            'System/Library/Frameworks/Combine.framework/Modules/Combine.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            172314
+    sdk_relative:    true
+  - mtime:           1731227670000000000
+    path:            'usr/lib/swift/ObjectiveC.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            6429
+    sdk_relative:    true
+  - mtime:           1731227822000000000
+    path:            'usr/lib/swift/Dispatch.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            56578
+    sdk_relative:    true
+  - mtime:           1731227918000000000
+    path:            'usr/lib/swift/CoreFoundation.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            22703
+    sdk_relative:    true
+  - mtime:           1731226638000000000
+    path:            'usr/lib/swift/Observation.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            3740
+    sdk_relative:    true
+  - mtime:           1731227593000000000
+    path:            'usr/lib/swift/System.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            93776
+    sdk_relative:    true
+  - mtime:           1731228428000000000
+    path:            'System/Library/Frameworks/Foundation.framework/Modules/Foundation.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            998737
+    sdk_relative:    true
+  - mtime:           1731228661000000000
+    path:            'usr/lib/swift/CoreMIDI.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            15986
+    sdk_relative:    true
+  - mtime:           1731229508000000000
+    path:            'usr/lib/swift/CoreAudio.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            9859
+    sdk_relative:    true
+  - mtime:           1731228646000000000
+    path:            'System/Library/Frameworks/CoreGraphics.framework/Modules/CoreGraphics.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            52734
+    sdk_relative:    true
+  - mtime:           1731228744000000000
+    path:            'usr/lib/swift/Metal.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            25853
+    sdk_relative:    true
+  - mtime:           1731229289000000000
+    path:            'usr/lib/swift/CoreMedia.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            133172
+    sdk_relative:    true
+  - mtime:           1731227674000000000
+    path:            'usr/lib/swift/simd.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            229349
+    sdk_relative:    true
+  - mtime:           1731228848000000000
+    path:            'usr/lib/swift/QuartzCore.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            1658
+    sdk_relative:    true
+  - mtime:           1731228683000000000
+    path:            'usr/lib/swift/UniformTypeIdentifiers.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            20456
+    sdk_relative:    true
+  - mtime:           1731229844000000000
+    path:            'usr/lib/swift/AVFoundation.swiftmodule/arm64-apple-xros-simulator.swiftinterface'
+    size:            73092
+    sdk_relative:    true
+version:         1
+...
