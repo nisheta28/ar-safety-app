@@ -4,6 +4,9 @@
   class UIManager {
     constructor() {
       this.root = document.getElementById("ui-root");
+      this.glassesHud = null;
+      this.leftLens = null;
+      this.rightLens = null;
       this.container = null;
       this.statusEl = null;
       this.badgeEl = null;
@@ -21,6 +24,32 @@
     ensureMounted() {
       if (!this.root || this.container) return;
 
+      this.glassesHud = document.createElement("div");
+      this.glassesHud.className = "glasses-hud";
+
+      this.leftLens = document.createElement("section");
+      this.leftLens.className = "glasses-lens glasses-lens--left";
+      this.leftLens.setAttribute("aria-hidden", "true");
+
+      const navTitle = document.createElement("div");
+      navTitle.className = "lens-nav-title";
+      navTitle.textContent = "Navigation";
+
+      const navHint = document.createElement("div");
+      navHint.className = "lens-nav-hint";
+      navHint.textContent = "Follow arrow guidance";
+
+      this.leftLens.appendChild(navTitle);
+      this.leftLens.appendChild(navHint);
+
+      const bridge = document.createElement("div");
+      bridge.className = "glasses-bridge";
+      bridge.setAttribute("aria-hidden", "true");
+
+      this.rightLens = document.createElement("section");
+      this.rightLens.className = "glasses-lens glasses-lens--right";
+      this.rightLens.setAttribute("aria-live", "polite");
+
       this.container = document.createElement("div");
       this.container.className = "status-panel";
 
@@ -34,7 +63,12 @@
 
       this.container.appendChild(this.badgeEl);
       this.container.appendChild(this.statusEl);
-      this.root.appendChild(this.container);
+      this.rightLens.appendChild(this.container);
+
+      this.glassesHud.appendChild(this.leftLens);
+      this.glassesHud.appendChild(bridge);
+      this.glassesHud.appendChild(this.rightLens);
+      this.root.appendChild(this.glassesHud);
 
       this.toastStack = document.createElement("div");
       this.toastStack.className = "toast-stack";
