@@ -40,110 +40,68 @@ video#gesture-camera-feed {
 
 .glasses-hud {
   position: fixed;
-  top: max(22px, env(safe-area-inset-top));
+  top: max(8px, env(safe-area-inset-top));
   left: 50%;
-  width: min(980px, 92vw);
-  height: min(320px, 42vh);
+  width: min(1120px, 96vw);
+  aspect-ratio: 1280 / 640;
   transform: translateX(-50%);
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.35s ease;
   z-index: 9;
   box-sizing: border-box;
-}
-
-body.guidance-active .glasses-hud {
-  opacity: 1;
-}
-
-.glasses-hud::before,
-.glasses-hud::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 44%;
-  height: 100%;
-  border: 2px solid rgba(153, 246, 228, 0.78);
-  border-radius: 24px;
-  background: rgba(11, 18, 25, 0.14);
-  box-shadow:
-    0 0 0 1px rgba(15, 23, 42, 0.48) inset,
-    0 0 18px rgba(45, 212, 191, 0.3);
-}
-
-.glasses-hud::before {
-  left: 0;
-}
-
-.glasses-hud::after {
-  right: 0;
+  background: url("specs.png") center / contain no-repeat;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.35));
 }
 
 .glasses-hud > .glasses-lens {
   position: absolute;
-  top: 8%;
-  bottom: 8%;
-  width: 38%;
+  top: 27%;
+  width: 30%;
+  height: 46%;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 12px;
+  gap: 10px;
+  padding: 8px 10px;
 }
 
 .glasses-lens--left {
-  left: 3%;
-  justify-content: flex-end;
+  left: 10.5%;
+  justify-content: center;
   align-items: flex-start;
 }
 
 .glasses-lens--right {
-  right: 3%;
+  right: 10.5%;
   justify-content: flex-start;
 }
 
 .lens-nav-title {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(226, 232, 240, 0.88);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
 }
 
 .lens-nav-hint {
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.88);
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
-}
-
-.glasses-bridge {
-  position: absolute;
-  top: 41%;
-  left: 50%;
-  width: 9%;
-  height: 18%;
-  transform: translate(-50%, -50%);
-  border-top: 2px solid rgba(153, 246, 228, 0.85);
-  border-bottom: 2px solid rgba(153, 246, 228, 0.4);
-  border-radius: 999px;
-  opacity: 0.9;
-}
-
-body.guidance-active .glasses-hud::before,
-body.guidance-active .glasses-hud::after {
-  border-color: rgba(153, 246, 228, 0.86);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(241, 245, 249, 0.98);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.78);
 }
 
 .status-panel {
   width: 100%;
   max-width: 100%;
-  padding: 11px 13px;
-  border-radius: 16px;
-  background: rgba(18, 20, 30, 0.52);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(14px) saturate(1.15);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.26);
-  color: #fff;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: rgba(12, 18, 28, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  color: rgba(248, 250, 252, 0.98);
   text-align: left;
 }
 
@@ -335,8 +293,8 @@ body.guidance-active .btn-cancel {
 
 .guidance-arrow-hud {
   position: fixed;
-  left: 24%;
-  top: 33%;
+  left: 29%;
+  top: 44%;
   transform: translate(-50%, -50%);
   z-index: 5;
   pointer-events: none;
@@ -345,10 +303,10 @@ body.guidance-active .btn-cancel {
 
 .guidance-arrow-svg {
   display: block;
-  width: min(220px, 42vw);
+  width: min(170px, 26vw);
   height: auto;
-  color: #99f6e4;
-  filter: drop-shadow(0 0 14px rgba(45, 212, 191, 0.5));
+  color: #d8fbff;
+  filter: drop-shadow(0 2px 12px rgba(14, 116, 144, 0.38));
 }
 
 .guidance-arrow-stem,
@@ -362,12 +320,12 @@ body.guidance-active .btn-cancel {
 
 .guidance-label {
   position: fixed;
-  left: 76%;
-  top: 34%;
-  width: min(240px, 30vw);
+  left: 68%;
+  top: 45%;
+  width: min(230px, 28vw);
   transform: translate(-50%, -50%);
   z-index: 6;
-  font-size: clamp(0.88rem, 2.6vw, 1.06rem);
+  font-size: clamp(0.95rem, 2.2vw, 1.22rem);
   font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.3;
@@ -382,24 +340,19 @@ body.guidance-active .btn-cancel {
 
 @media (max-width: 780px) {
   .glasses-hud {
-    width: 94vw;
-    height: min(260px, 36vh);
-  }
-
-  .glasses-bridge {
-    width: 13%;
-    height: 16%;
+    width: 98vw;
+    top: max(12px, env(safe-area-inset-top));
   }
 
   .guidance-arrow-hud {
-    left: 27%;
-    top: 32%;
+    left: 31%;
+    top: 43%;
   }
 
   .guidance-label {
-    left: 72%;
-    width: min(170px, 38vw);
-    font-size: 0.9rem;
+    left: 67%;
+    width: min(165px, 34vw);
+    font-size: 0.92rem;
   }
 }
 

@@ -42,10 +42,6 @@
       this.leftLens.appendChild(navTitle);
       this.leftLens.appendChild(navHint);
 
-      const bridge = document.createElement("div");
-      bridge.className = "glasses-bridge";
-      bridge.setAttribute("aria-hidden", "true");
-
       this.rightLens = document.createElement("section");
       this.rightLens.className = "glasses-lens glasses-lens--right";
       this.rightLens.setAttribute("aria-live", "polite");
@@ -66,7 +62,6 @@
       this.rightLens.appendChild(this.container);
 
       this.glassesHud.appendChild(this.leftLens);
-      this.glassesHud.appendChild(bridge);
       this.glassesHud.appendChild(this.rightLens);
       this.root.appendChild(this.glassesHud);
 
