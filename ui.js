@@ -7,6 +7,8 @@
       this.glassesHud = null;
       this.leftLens = null;
       this.rightLens = null;
+      this.guidanceMount = null;
+      this.systemCues = null;
       this.container = null;
       this.statusEl = null;
       this.badgeEl = null;
@@ -16,6 +18,7 @@
       this.countdownLayer = null;
       this.endButton = null;
       this.countdownTimers = [];
+      this.systemCueTimerId = null;
       this.endSafetyHandler = null;
 
       this.ensureMounted();
@@ -31,20 +34,20 @@
       this.leftLens.className = "glasses-lens glasses-lens--left";
       this.leftLens.setAttribute("aria-hidden", "true");
 
-      const navTitle = document.createElement("div");
-      navTitle.className = "lens-nav-title";
-      navTitle.textContent = "Navigation";
+      this.guidanceMount = document.createElement("div");
+      this.guidanceMount.className = "lens-guidance-mount";
 
-      const navHint = document.createElement("div");
-      navHint.className = "lens-nav-hint";
-      navHint.textContent = "Follow arrow guidance";
-
-      this.leftLens.appendChild(navTitle);
-      this.leftLens.appendChild(navHint);
+      this.leftLens.appendChild(this.guidanceMount);
 
       this.rightLens = document.createElement("section");
       this.rightLens.className = "glasses-lens glasses-lens--right";
       this.rightLens.setAttribute("aria-live", "polite");
+
+      const templeHint = document.createElement("div");
+      templeHint.className = "glasses-temple-hint";
+      templeHint.textContent = "Hold side temple to exit";
+      templeHint.setAttribute("aria-hidden", "true");
+      this.rightLens.appendChild(templeHint);
 
       this.container = document.createElement("div");
       this.container.className = "status-panel";
@@ -59,7 +62,12 @@
 
       this.container.appendChild(this.badgeEl);
       this.container.appendChild(this.statusEl);
+      this.container.classList.add("status-panel--idle");
       this.rightLens.appendChild(this.container);
+
+      this.systemCues = document.createElement("div");
+      this.systemCues.className = "lens-system-cues";
+      this.rightLens.appendChild(this.systemCues);
 
       this.glassesHud.appendChild(this.leftLens);
       this.glassesHud.appendChild(this.rightLens);
@@ -78,7 +86,9 @@
       const { badge = "", durationMs = 0 } = options;
 
       this.statusEl.textContent = text;
-      this.badgeEl.textContent = badge;
+      const badgeText = String(badge || "");
+      this.badgeEl.textContent = badgeText.toLowerCase() === "navigation" ? "" : badgeText;
+      this.container.classList.remove("status-panel--idle");
 
       if (this.clearTimerId) {
         clearTimeout(this.clearTimerId);
@@ -94,6 +104,32 @@
       if (!this.statusEl || !this.badgeEl) return;
       this.statusEl.textContent = "";
       this.badgeEl.textContent = "";
+      this.container.classList.add("status-panel--idle");
+    }
+
+    showSystemCue(text, durationMs = 3000) {
+      if (!this.systemCues) return;
+      this.systemCues.innerHTML = `<div class="lens-system-cue"><span class="lens-cue-dot"></span>${text}</div>`;
+
+      if (this.systemCueTimerId) {
+        clearTimeout(this.systemCueTimerId);
+        this.systemCueTimerId = null;
+      }
+
+      if (durationMs > 0) {
+        this.systemCueTimerId = setTimeout(() => {
+          this.clearSystemCue();
+        }, durationMs);
+      }
+    }
+
+    clearSystemCue() {
+      if (!this.systemCues) return;
+      this.systemCues.innerHTML = "";
+      if (this.systemCueTimerId) {
+        clearTimeout(this.systemCueTimerId);
+        this.systemCueTimerId = null;
+      }
     }
 
     clearCountdownTimers() {
@@ -114,7 +150,7 @@
         }
 
         const layer = document.createElement("div");
-        layer.className = "countdown-layer";
+        layer.className = "countdown-layer countdown-layer--lens";
         layer.setAttribute("role", "dialog");
         layer.setAttribute("aria-modal", "true");
         layer.setAttribute("aria-label", "Starting safety mode");
@@ -149,7 +185,7 @@
         card.appendChild(num);
         card.appendChild(cancelBtn);
         layer.appendChild(card);
-        this.root.appendChild(layer);
+        (this.rightLens || this.root).appendChild(layer);
         this.countdownLayer = layer;
 
         const stepMs = 1000;
@@ -205,6 +241,7 @@
     clearToasts() {
       if (!this.toastStack) return;
       this.toastStack.innerHTML = "";
+      this.clearSystemCue();
     }
 
     showEndSafetyButton(onClick) {
@@ -236,6 +273,11 @@
         this.endButton = null;
       }
       this.endSafetyHandler = null;
+    }
+
+    getGuidanceMount() {
+      this.ensureMounted();
+      return this.guidanceMount || this.leftLens || this.root;
     }
   }
 

@@ -46,12 +46,37 @@ video#gesture-camera-feed {
   aspect-ratio: 1280 / 640;
   transform: translateX(-50%);
   pointer-events: none;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.35s ease;
   z-index: 9;
   box-sizing: border-box;
   background: url("specs.png") center / contain no-repeat;
   filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.35));
+}
+
+.glasses-temple-hint {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 2;
+  max-width: min(170px, 80%);
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(226, 232, 240, 0.24);
+  background: rgba(9, 12, 20, 0.28);
+  color: rgba(226, 232, 240, 0.9);
+  font-size: clamp(0.6rem, 1.15vw, 0.72rem);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  display: none;
+}
+
+body.guidance-active .glasses-temple-hint {
+  display: block;
 }
 
 .glasses-hud > .glasses-lens {
@@ -67,29 +92,22 @@ video#gesture-camera-feed {
 
 .glasses-lens--left {
   left: 10.5%;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
 .glasses-lens--right {
   right: 10.5%;
-  justify-content: flex-start;
+  justify-content: center;
+  gap: 14px;
 }
 
-.lens-nav-title {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: rgba(226, 232, 240, 0.88);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
-}
-
-.lens-nav-hint {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: rgba(241, 245, 249, 0.98);
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.78);
+.lens-guidance-mount {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  min-height: 140px;
+  pointer-events: none;
 }
 
 .status-panel {
@@ -103,6 +121,10 @@ video#gesture-camera-feed {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
   color: rgba(248, 250, 252, 0.98);
   text-align: left;
+}
+
+.status-panel--idle {
+  display: none;
 }
 
 .status-badge {
@@ -120,6 +142,40 @@ video#gesture-camera-feed {
   letter-spacing: -0.01em;
 }
 
+.lens-system-cues {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(15, 20, 30, 0.22);
+  border: 1px solid rgba(226, 232, 240, 0.18);
+  backdrop-filter: blur(4px);
+}
+
+.lens-system-cues:empty {
+  display: none;
+}
+
+.lens-system-cue {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: rgba(241, 245, 249, 0.9);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.lens-cue-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(125, 211, 252, 0.95);
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.58);
+  flex: 0 0 auto;
+}
+
 /* Countdown — compact card, not full-screen */
 .countdown-layer {
   position: fixed;
@@ -127,15 +183,30 @@ video#gesture-camera-feed {
   z-index: 30;
   display: flex;
   align-items: flex-start;
+  justify-content: flex-end;
+  padding:
+    max(56px, calc(env(safe-area-inset-top) + 42px))
+    max(12vw, calc(env(safe-area-inset-right) + 56px))
+    16px
+    16px;
+  pointer-events: none;
+}
+
+.countdown-layer--lens {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: flex-start;
   justify-content: center;
-  padding: max(16px, env(safe-area-inset-top)) 16px 16px;
+  padding: 6px;
   pointer-events: none;
 }
 
 .countdown-card {
   pointer-events: auto;
-  min-width: min(320px, 92vw);
-  padding: 20px 22px 18px;
+  min-width: min(260px, 40vw);
+  padding: 16px 16px 14px;
   border-radius: var(--radius-lg);
   background: linear-gradient(165deg, rgba(22, 26, 38, 0.92) 0%, rgba(14, 16, 24, 0.94) 100%);
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -144,8 +215,17 @@ video#gesture-camera-feed {
   text-align: center;
 }
 
+.countdown-layer--lens .countdown-card {
+  min-width: 0;
+  width: min(180px, 94%);
+  padding: 10px 10px 9px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px) saturate(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
 .countdown-title {
-  font-size: 0.8rem;
+  font-size: 0.74rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -153,8 +233,13 @@ video#gesture-camera-feed {
   margin-bottom: 14px;
 }
 
+.countdown-layer--lens .countdown-title {
+  font-size: 0.6rem;
+  margin-bottom: 7px;
+}
+
 .countdown-number {
-  font-size: clamp(2.75rem, 10vw, 3.5rem);
+  font-size: clamp(2.2rem, 8vw, 2.8rem);
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.04em;
@@ -162,6 +247,11 @@ video#gesture-camera-feed {
   text-shadow: 0 4px 32px rgba(14, 165, 233, 0.36);
   line-height: 1;
   margin-bottom: 18px;
+}
+
+.countdown-layer--lens .countdown-number {
+  font-size: clamp(1.5rem, 6vw, 1.9rem);
+  margin-bottom: 8px;
 }
 
 .btn-cancel {
@@ -177,6 +267,11 @@ video#gesture-camera-feed {
   border-radius: var(--radius-pill);
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.countdown-layer--lens .btn-cancel {
+  font-size: 0.68rem;
+  padding: 7px 12px;
 }
 
 .btn-cancel:hover {
@@ -206,6 +301,7 @@ video#gesture-camera-feed {
   gap: 8px;
   max-width: min(400px, 92vw);
   pointer-events: none;
+  display: none;
 }
 
 .toast {
@@ -301,6 +397,18 @@ body.guidance-active .btn-cancel {
   transition: opacity 0.35s ease;
 }
 
+.guidance-arrow-hud--lens {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  top: auto;
+  transform: translateX(-50%);
+}
+
+.guidance-arrow-hud--lens .guidance-arrow-svg {
+  width: min(150px, 86%);
+}
+
 .guidance-arrow-svg {
   display: block;
   width: min(170px, 26vw);
@@ -320,12 +428,12 @@ body.guidance-active .btn-cancel {
 
 .guidance-label {
   position: fixed;
-  left: 68%;
-  top: 45%;
-  width: min(230px, 28vw);
+  left: 33%;
+  top: 52%;
+  width: min(220px, 24vw);
   transform: translate(-50%, -50%);
   z-index: 6;
-  font-size: clamp(0.95rem, 2.2vw, 1.22rem);
+  font-size: clamp(0.92rem, 1.8vw, 1.05rem);
   font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.3;
@@ -336,6 +444,16 @@ body.guidance-active .btn-cancel {
     0 4px 24px rgba(0, 0, 0, 0.5);
   pointer-events: none;
   transition: opacity 0.35s ease;
+}
+
+.guidance-label--lens {
+  position: absolute;
+  left: 50%;
+  top: 12%;
+  width: 84%;
+  transform: translateX(-50%);
+  text-align: left;
+  font-size: clamp(0.88rem, 1.6vw, 0.98rem);
 }
 
 @media (max-width: 780px) {
@@ -349,10 +467,41 @@ body.guidance-active .btn-cancel {
     top: 43%;
   }
 
+  .glasses-temple-hint {
+    top: 2px;
+    right: 2px;
+    max-width: 78%;
+    font-size: 0.58rem;
+    padding: 3px 7px;
+  }
+
   .guidance-label {
-    left: 67%;
-    width: min(165px, 34vw);
+    left: 33%;
+    top: 53%;
+    width: min(170px, 38vw);
     font-size: 0.92rem;
+  }
+
+  .guidance-label--lens {
+    top: 15%;
+    width: 88%;
+    font-size: 0.86rem;
+  }
+
+  .countdown-layer {
+    padding:
+      max(42px, calc(env(safe-area-inset-top) + 28px))
+      max(6vw, calc(env(safe-area-inset-right) + 14px))
+      12px
+      12px;
+  }
+
+  .countdown-card {
+    min-width: min(220px, 52vw);
+  }
+
+  .countdown-layer--lens .countdown-card {
+    width: min(170px, 96%);
   }
 }
 

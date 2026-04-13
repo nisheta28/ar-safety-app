@@ -22,9 +22,13 @@ function detectionToYawDeg(det) {
 
 export function createARGuidance(options = {}) {
   const container = options.container ?? document.body;
+  const bboxContainer = options.bboxContainer ?? document.body;
 
   const hudRoot = document.createElement("div");
   hudRoot.className = "guidance-arrow-hud";
+  if (container !== document.body) {
+    hudRoot.classList.add("guidance-arrow-hud--lens");
+  }
   hudRoot.setAttribute("aria-hidden", "true");
   hudRoot.innerHTML = `
     <svg class="guidance-arrow-svg" viewBox="0 0 100 72" xmlns="http://www.w3.org/2000/svg">
@@ -42,6 +46,9 @@ export function createARGuidance(options = {}) {
 
   const label = document.createElement("div");
   label.className = "guidance-label";
+  if (container !== document.body) {
+    label.classList.add("guidance-label--lens");
+  }
   label.setAttribute("aria-hidden", "true");
   label.textContent = "";
   container.appendChild(label);
@@ -49,7 +56,7 @@ export function createARGuidance(options = {}) {
   const bboxEl = document.createElement("div");
   bboxEl.className = "exit-bbox";
   bboxEl.style.display = "none";
-  container.appendChild(bboxEl);
+  bboxContainer.appendChild(bboxEl);
 
   let running = false;
   let yawSmooth = 0;

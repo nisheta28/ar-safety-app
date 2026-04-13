@@ -13,6 +13,7 @@ let navigationActive = false;
 let safetyModeActive = false;
 let activationInProgress = false;
 let currentCallSid = null;
+let cueSequenceTimers = [];
 
 window.__SAFETY_DEBUG__ = {
   escalation: false,
@@ -33,7 +34,10 @@ function ensureSystems() {
     exitDetector = createExitDetector({ mockWhenWeak: true });
   }
   if (!arGuidance) {
-    arGuidance = createARGuidance({ container: document.body });
+    arGuidance = createARGuidance({
+      container: window.AppUI?.getGuidanceMount?.() ?? document.body,
+      bboxContainer: document.body
+    });
   }
 }
 
@@ -45,6 +49,29 @@ function stopNavigationLoop() {
   }
   arGuidance?.stop();
   exitDetector?.reset();
+}
+
+function clearCueSequenceTimers() {
+  cueSequenceTimers.forEach((id) => clearTimeout(id));
+  cueSequenceTimers = [];
+}
+
+function scheduleInteractionCues() {
+  clearCueSequenceTimers();
+
+  const steps = [
+    { delayMs: 0, text: "Call in progress" },
+    { delayMs: 13000, text: "Finding nearest exit" },
+    { delayMs: 26000, text: "Location sent to emergency contacts" }
+  ];
+
+  steps.forEach(({ delayMs, text }) => {
+    const id = setTimeout(() => {
+      if (!safetyModeActive) return;
+      window.AppUI.showSystemCue(text, 3000);
+    }, delayMs);
+    cueSequenceTimers.push(id);
+  });
 }
 
 function navigationFrame(now) {
@@ -189,6 +216,7 @@ async function runCallAttemptsWithEscalation() {
 function endSafetyMode() {
   safetyModeActive = false;
   activationInProgress = false;
+  clearCueSequenceTimers();
 
   stopNavigationLoop();
   window.AppUI.hideEndSafetyButton();
@@ -202,6 +230,13 @@ function endSafetyMode() {
     currentCallSid = null;
     void hangupCall(sid);
   }
+}
+
+function handleScreenTapToExit() {
+  if (!safetyModeActive) {
+    return;
+  }
+  endSafetyMode();
 }
 
 async function handleGestureDetected() {
@@ -227,18 +262,9 @@ async function handleGestureDetected() {
   document.body.classList.add("safety-mode");
   document.body.classList.add("guidance-active");
 
-  window.AppUI.showEndSafetyButton(() => {
-    endSafetyMode();
-  });
-
   startNavigationLoop();
 
-  window.AppUI.showToast("Call in progress", 4200);
-  setTimeout(() => {
-    if (safetyModeActive) {
-      window.AppUI.showToast("Finding nearest exit", 4000);
-    }
-  }, 380);
+  scheduleInteractionCues();
 
   void runCallAttemptsWithEscalation();
 
@@ -246,6 +272,7 @@ async function handleGestureDetected() {
 }
 
 document.addEventListener("gestureDetected", handleGestureDetected);
+document.addEventListener("pointerdown", handleScreenTapToExit);
 
 window.addEventListener("beforeunload", () => {
   endSafetyMode();
