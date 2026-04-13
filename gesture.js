@@ -21,15 +21,29 @@
       this.videoEl = this.createVideoElement();
       this.hands = this.createHandsInstance();
 
-      this.camera = new Camera(this.videoEl, {
+      const baseCameraConfig = {
         onFrame: async () => {
           await this.hands.send({ image: this.videoEl });
         },
         width: 640,
         height: 480
+      };
+
+      // Prefer rear camera for mobile AR; gracefully fall back to front camera.
+      this.camera = new Camera(this.videoEl, {
+        ...baseCameraConfig,
+        facingMode: "environment"
       });
 
-      await this.camera.start();
+      try {
+        await this.camera.start();
+      } catch (environmentError) {
+        this.camera = new Camera(this.videoEl, {
+          ...baseCameraConfig,
+          facingMode: "user"
+        });
+        await this.camera.start();
+      }
       this.isRunning = true;
     }
 
